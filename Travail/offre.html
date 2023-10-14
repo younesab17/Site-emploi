@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Offre</title>
+	<link rel="stylesheet"  href="offre.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<form class="login" id="form" method='POST' action="offre.php">
+		<div class="infobox">
+		<h2>Proposer un offre</h2>
+		<div class="right">
+          <input type="text" name="titre" id="titreOf" class="field" placeholder="Titre de l'offre">
+          <textarea name="description" id="desc" class="field" placeholder="description de l'offre" rows="1"></textarea>
+          <div class="fieldl">
+            <label>competences :</label>
+            <label for="JAVA">
+            <input type="checkbox" id="JAVA" name="competences[]" value="JAVA"> JAVA
+            </label>
+            <label for="PHP">
+            <input type="checkbox" id="PHP" name="competences[]" value="PHP"> PHP
+            </label>
+          </div>
+          <div >                    
+            <select name="diplomes" id="diplomes" class="fieldl">
+              <option selected="selected">Selectionner votre diplome </option> 
+              <option value="Securite Informatique">Securite Informatique </option> 
+              <option value="Business Intelligence">Business Intelligence </option> 
+              <option value="Business Information System">Business Information System</option>
+              <option value="Genie Logiciel">Genie Logiciel </option>
+              <option value="Developpement Web">Developpement Web </option>
+              <option value="Developpement Mobile">Developpement Mobile </option>
+            </select>
+          </div>
+    </div>
+    <div class="left">
+        <input class="fieldl" type="number" id="AnEx"  placeholder="Annee(s) d'experience" min="0" max="10" name="experience">
+        <input type="number" id="salaire" name="salaire" class="field" placeholder="Salaire" min="0">
+        <div class="fieldl">
+          <label for="C++">
+          <input type="checkbox" id="C++" name="competences[]" value="C++"> C++
+          </label>
+          <label for="Python">
+          <input type="checkbox" id="Python"  name="competences[]" value="Python"> Python
+          </label>
+          <label for="PL/SQL">
+          <input type="checkbox" id="PLSQL"  name="competences[]" value="PLSQL"> PL/SQL
+          </label>
+        </div>
+        <p id='erreur' class="erreur"></p>
+        <button type="submit" class="btn">Publier l'offre</button>    
+        <!-- <a href="accountentreprise.php" class="fieldl">Retour</a>          -->
+		</div>
+		</div>
+	</form>
+  <script src="offre.js" method='POST'></script>
+</body>
+</html>
